@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="webmaster.master.cs" Inherits="web_webmaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+     <title></title>
+       <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/css.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+      <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+       <form id="form1" runat="server">
+   <nav class="navbar   navbar-default" role="navigation" style="margin-bottom:0px;padding-bottom:0px">
+   <div class="navbar-header" style="margin-bottom:0;padding-bottom:0">
+      <button type="button" class="navbar-toggle " data-toggle="collapse" 
+         data-target="#example-navbar-collapse">
+         <span class="sr-only">切换导航</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+      <img src="../images/logo.png" class="img-rounded" style="height:63px;padding-left:120px"/>
+
+   </div>
+   <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav">
+         <li><a href="../Default.aspx"><img src="../images/anniu1.jpg" class="img-thumbnail" /></a></li>
+         <li><a href="../mycart.aspx"><img src="../images/anniu2.jpg" class="img-thumbnail" /></a></li>
+         <li><a href="../gwlc.aspx"><img src="../images/anniu3.jpg" class="img-thumbnail" /></a></li>
+           <li><a href="../question.aspx"><img src="../images/anniu4.jpg" class="img-thumbnail" /></a></li>
+       <li><a href="../guanyu.aspx"><img src="../images/anniu6.jpg" class="img-thumbnail" /></a></li>
+      </ul>
+       <asp:Panel ID="logoutpanel" runat="server">
+        <ul class="nav navbar-nav navbar-left" >
+           
+                   <li>  <a title="用户登陆" href="login.aspx">用户登陆</a> </li>
+                   <li> <a title="忘记密码" href="researchpassword.aspx" >忘记密码</a></li>
+                    <li> <a title="用户注册" href="regist.aspx" >用户注册</a></li>
+      </ul></asp:Panel>
+       <asp:Panel ID="loginpanel" runat="server">
+          <ul class="nav navbar-nav navbar-left"  >      
+                   <li>   <asp:Label runat="server" ID="usernamelabel" Font-Size="Small" ForeColor="#CC3300"></asp:Label></li>
+                  
+                  <li>  <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">退出登陆</asp:LinkButton>  </li>
+                 
+              </ul></asp:Panel>
+   </div>
+   </nav>
+
+ <div id="myCarousel" class="carousel slide" style="height:300px;padding-top:0;margin-top:0;" >
+   <!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+   </ol>   
+   <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner ">
+      <div class="item  active">
+         <img src="../adpic/6.jpg" style="height:300px;width:100%" alt="First slide"/>
+      </div>
+      <div class="item ">
+         <img src="../adpic/7.jpg" style="height:300px;width:100%" alt="Second slide"/>
+      </div>
+      <div class="item">
+         <img src="../adpic/8jpg.png" style="height:300px;width:100%" alt="Third slide"/>
+      </div>
+       <div class="item">
+         <img src="../adpic/9.jpg" style="height:300px;width:100%" alt="fouth slide"/>
+      </div>
+       <div class="item">
+         <img src="../adpic/10.jpg" style="height:300px;width:100%" alt="fifth slide"/>
+           
+      </div>
+   </div>
+   <!-- 轮播（Carousel）导航 -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next">&rsaquo;</a>
+</div>
+<div style="height:42px;background-image:url(../images/topbg.jpg);text-align:center">
+    
+    
+ <ul class="nav nav-pills" style="padding-left:120px">
+    <li ><script src="../js/getdate.js"></script></li> 
+   <li ><a title="新品上架" href="newproductlist.aspx"><img src="../images/tnewpr.gif" border="0" class="img-responsive"/></a></li>
+   <li><a title="特价商品" href="specialproductlist.aspx"><img src="../images/tspepr.gif" border="0" class="img-responsive"/></a></li>
+   <li><a title="推荐商品" href="recommendedproductlist.aspx"><img src="../images/thotpr.gif" border="0" class="img-responsive"/></a></li>
+   <li><a href="userinfo.aspx"><img src="../images/tbrandpr.gif" border="0" class="img-responsive"/></a></li>
+   <li><a href="feedback.aspx" title="留言板"><img src="../images/bbs.gif" border="0" class="img-responsive"/></a></li>
+   
+</ul>
+
+</div>
+           <div class="container">
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+           </asp:ContentPlaceHolder>
+ </div> 
+<div style="height:30px; width:100%; background-image:url(../images/topbg.jpg)"></div>
+   <div class="container">
+      
+     <div class="row">
+         <div class="col-lg-3">
+             <img src="../images/logo.png"  height="63"/>
+         </div>
+         <div class="col-lg-9">
+             <a href="Default.aspx">购物首页</a> | <a href="../guanyu.aspx" >关于我们</a> | <a >联系我们</a> | <a >版权声明:copyright by Z1502 姜明浩</a> | <a >付款方式</a> | <a>留言/建议/投诉</a> | <a href="admin/login.aspx">网站后台入口</a><br />
+             客服邮箱：<a ></a>786764939@qq.com　客服电话：13740022736邮政编码：
+             111000　公司地址：辽宁省丹东市辽东学院<br/>
+            　<a>Copyright &copy; 2006  All Rights Reserved. </a>
+         </div>
+     </div>
+
+ </div>
+           
+              </form>
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

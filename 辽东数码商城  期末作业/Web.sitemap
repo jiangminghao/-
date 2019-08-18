@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/admin/default.aspx" title="后台管理"  description="后台管理">
+        <siteMapNode url="~/admin/addproduct.aspx" title="商品上架"  description="商品上架" />
+        <siteMapNode url="~/admin/productlist.aspx" title="商品详情"  description="商品详情" />
+        <siteMapNode url="~/admin/productmng.aspx" title="商品列表"  description="商品列表" />
+      <siteMapNode url="~/admin/type1mng.aspx" title="商品一级分类管理"  description="商品一级分类管理" />
+      <siteMapNode url="~/admin/type2mng.aspx" title="商品二级分类管理"  description="商品二级分类管理" />
+      <siteMapNode url="~/admin/useradd.aspx" title="添加管理员"  description="添加管理员" />
+      <siteMapNode url="~/admin/usermng.aspx" title="用户管理"  description="用户管理" />
+    </siteMapNode>
+</siteMap>

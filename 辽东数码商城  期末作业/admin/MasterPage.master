@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="admin_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+       <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+      <script src="../js/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container " style="border:solid 1px">
+       <div class="row" style="background-color:beige">
+         <div class="col-md-3" style="height:800px" >
+             <h1>后台管理</h1>
+             <a href="../default.aspx"><img  src="../images/backindex.jpg"/ style="padding-bottom:60px"/></a>
+             欢迎您，<asp:Literal ID="Literal1" runat="server"></asp:Literal>
+             <ul class="nav nav-pills nav-stacked">
+                <li ><a href="type1mng.aspx">一级分类管理</a></li>
+                 <li ><a href="type2mng.aspx">二级分类管理</a></li>
+                 <li ><a href="addproduct.aspx">商品上架</a></li>
+                 <li ><a href="productmng.aspx">商品管理</a></li>
+                 <li ><a href="ordermng.aspx">订单管理</a></li>
+                 <li ><a href="usermng.aspx">用户管理</a></li>
+                 <li><a href="feedbackshenhe.aspx">留言管理</a></li>
+                  <li ><a href="useradd.aspx">添加管理员</a></li>
+                    
+              </ul>
+             
+         </div>
+  
+           <div class="col-md-9">
+               
+               当前位置：<asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
+               <hr />
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+           </div>
+         
+      </div>
+    </div>
+    </form>
+</body>
+</html>
